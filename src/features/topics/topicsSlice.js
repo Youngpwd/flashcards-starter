@@ -1,7 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 export const topicsSlice = createSlice({
-    name: 'topics',
-    initialState: {}
-})
+  name: "topics",
+  initialState: {
+    topics: {
+      /*id: {
+                id:,
+                name:,
+                icon:
+            } */
+    }
+  },
+  reducers: {
+    addtopic: (state, action) => {
+      const idKey = action.payload.id;
+      return {
+        ...state,
+        [idKey]: { ...action.payload, quizIds: [] }
+      };
+    }
+  }
+});
+
+export const topicsSelector = (state) => state.topics;
