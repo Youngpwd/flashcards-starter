@@ -215,4 +215,5 @@ li:not(:last-child) {
   color: white;
   padding: 73px 44px;
   width: 100%;
+  cursor: pointer;
 }
